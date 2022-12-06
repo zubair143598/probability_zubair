@@ -72,7 +72,9 @@ const Random = () => {
           </div>
           <div className="col-lg-2  mt-5">
           <div className="card p-5">
-            {console.log(data[randnum])}
+            {
+              data[randnum]?.diamond
+            }
           </div>
         </div>
         </div>
