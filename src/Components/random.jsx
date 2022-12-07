@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect} from "react";
+import { useState} from "react";
 
 const Random = () => {
   const [randnum, setRandnum] = useState("");
@@ -41,35 +41,35 @@ const Random = () => {
     console.log( data[randnum])
   }
 
-  const [random, setRandom] = useState("");
-  const [show, setShow] = useState(false);
-  const randomNumber = () => {
-    // setRandom(Math.floor(Math.random() * data.length) + 1);
-    setShow(true);
-    let test = pick_random();
-    setRandom(test);
-  };
-  useEffect(() => {
-    setTimeout(function () {
-      setShow(false);
-    }, 4000);
-  }, [random]);
-  const set = { 1: 0.4, 2: 0.3, 3: 0.2, 4: 0.1 };
-  // get probabilities sum:
-  var sum = 0;
-  for (let j in set) {
-    sum += set[j];
-  }
-  console.log(pick_random());
-  function pick_random() {
-    var pick = Math.random() * sum;
-    for (let j in set) {
-      pick -= set[j];
-      if (pick <= 0) {
-        return j;
-      }
-    }
-  }
+  // const [random, setRandom] = useState("");
+  // const [show, setShow] = useState(false);
+  // const randomNumber = () => {
+  //   // setRandom(Math.floor(Math.random() * data.length) + 1);
+  //   setShow(true);
+  //   let test = pick_random();
+  //   setRandom(test);
+  // };
+  // useEffect(() => {
+  //   setTimeout(function () {
+  //     setShow(false);
+  //   }, 4000);
+  // }, [random]);
+  // const set = { 1: 0.4, 2: 0.3, 3: 0.2, 4: 0.1 };
+  // // get probabilities sum:
+  // var sum = 0;
+  // for (let j in set) {
+  //   sum += set[j];
+  // }
+  // console.log(pick_random());
+  // function pick_random() {
+  //   var pick = Math.random() * sum;
+  //   for (let j in set) {
+  //     pick -= set[j];
+  //     if (pick <= 0) {
+  //       return j;
+  //     }
+  //   }
+  // }
   return (
     <div className="container">
       <div className="row">
@@ -103,13 +103,13 @@ const Random = () => {
           <div className="col-lg-5  mt-5">
           <div className="card p-5">
             {
-              data.map((val,key)=>
-              {
-                return
+              // data.map((val,key)=>
+              // {
+              //   return
 
-              })
+              // })
             }
-            {/* {
+            {
               <img src={data[randnum]?.img} alt="" />
             }
             {
@@ -120,7 +120,7 @@ const Random = () => {
             }
             {
              <p className="mt-5">silver: {data[randnum]?.silver}</p>
-            } */}
+            }
           </div>
         </div>
         </div>
